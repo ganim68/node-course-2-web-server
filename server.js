@@ -1,7 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs  = require('fs');
-const lestinPort =3200;
+const Port =process.env.PORT || 3200;
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/Partials');
@@ -43,7 +43,7 @@ app.get('/about', (req , res) => res.render('about.hbs',
 
 app.get('/bad', (req , res) => res.send({errorMessage :'Error handeling Request'}));
 
-app.listen(lestinPort, () => console.log(`Example app listening on port ${lestinPort}!`));
+app.listen(Port, () => console.log(`Server app listening on port ${Port}!`));
 
 
 // const express = require('express');
