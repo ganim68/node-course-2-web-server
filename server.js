@@ -41,6 +41,11 @@ app.get('/about', (req , res) => res.render('about.hbs',
         pageTitle :'About Page'
     }));
 
+app.get('/projects',(req , res) => res.render('projects.hbs',
+    {
+        pageTitle :'Projects Page'
+    }));
+
 app.get('/bad', (req , res) => res.send({errorMessage :'Error handeling Request'}));
 
 app.listen(Port, () => console.log(`Server app listening on port ${Port}!`));
